@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CTS-NL GIT Tutorial</title>
+
+		<meta name="description" content="A tutorial on the GIT distributed version control system.">
+		<meta name="author" content="Tim Oram">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/reveal.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/css/zenburn.css">
+
+		<!-- Grid system -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ?
+					'//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/print/pdf.css' :
+					'//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>GIT Version Control</h1>
+					<h3></h3>
+					<p>
+						<small>
+							Presented by <a href="http://mitmaro.ca">Tim Oram</a>
+						</small>
+					</p>
+					<p>
+						<small>
+							Created in cooperation with the  <a href="ctsnl.ca">Computer Technology Society of NL</a>
+						</small>
+					</p>
+
+					<aside class="notes">
+						Presentation on the GIT version control system
+					</aside>
+
+				</section>
+				<section>
+					<p>Why you should use a VCS?</p>
+					<p class="fragment">What and why GIT?</p>
+					<p class="fragment">The basics of using GIT?</p>
+				</section>
+				<section>
+					<section>
+						<h2>What is version control system?</h2>
+
+						<aside class="notes">
+							For anyone familiar with VCS this may be a bit boring.
+						</aside>
+					</section>
+					<section>
+						<h2>Software development workflow</h2>
+						<p class="fragment">Create</p>
+						<p class="fragment">Edit</p>
+						<p class="fragment">Save</p>
+						<p class="fragment">Repeat</p>
+
+						<aside class="notes">
+							A typical work flow of a software developer.
+						</aside>
+					</section>
+					<section>
+						<h2>You may want to know...</h2>
+						<p></p>
+						<p class="fragment">Why you made a change?</p>
+						<p class="fragment">When you made the change?</p>
+						<p class="fragment">What changes were made?</p>
+						<p></p>
+						<h3 class="fragment">...at any time in the future.</h3>
+					</section>
+					<section>
+						<h2>Multiple developers?</h2>
+						<p class="fragment">Who made the change?</p>
+
+						<aside class="notes">
+							We add the question who made the change.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Early Version Control</h2>
+						<p>
+							<img data-src="img/tarball-1.png" alt="Tar ball CVS" />
+						</p>
+						<aside class="notes">
+							The first 10 years of the Linux kernel used tarballs.
+						</aside>
+					</section>
+					<section>
+						<p>You get the <b>when</b>,<span class="fragment"> the <b>what</b>,</span></p>
+						<p class="fragment">but not the <b>why</b></p>
+						<p class="fragment">and tarballs are <b>difficult</b>.</p>
+
+						<aside class="notes">
+							<p>When from the file name.</p>
+							<p>What from a diff of the contents of the tarballs.</p>
+							<p>Tar create command can be clumsy.</p>
+							<p>Diff on two tar balls is painful.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Multiple Developers</h2>
+						<p>
+							<img data-src="img/tarball-2.png" alt="Tar ball CVS with multiple developers" />
+						</p>
+					</section>
+					<section>
+						<p>You get the who, </p>
+						<p class="fragment">but it is very messy</p>
+						<div class="fragment">
+							<p>and which version is newer?</p>
+							<img data-src="img/tarball-3.png" alt="Tar ball mess" />
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>History of GIT</h2>
+						<p class="fragment">Developed by Linus Torvalds in 2005</p>
+						<p class="fragment">for the linux kernel because</p>
+						<p class="fragment">the previous tool they used was no longer available</p>
+						<p class="fragment">and everything else sucked.</p>
+					</section>
+					<section>
+						<h2>Why did the others suck?</h2>
+						<p class="fragment">They were either slow, <span class="fragment">complicated</span></p>
+						<p class="fragment">did not handle large projects well, </p>
+						<p class="fragment">or were not distributed.</p>
+					</section>
+
+					<section>
+						<h2>Why use GIT?</h2>
+						<p class="fragment">GIT is fast!</p>
+						<p class="fragment">Has one of the best branching systems.</p>
+						<p class="fragment">Fully distributed, no central server.</p>
+						<p class="fragment">Local, no network connection required.</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js', condition: function() { return !document.body.classList; } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
