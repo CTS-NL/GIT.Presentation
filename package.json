@@ -1,0 +1,29 @@
+{
+  "name": "nlcts.presentations.git",
+  "version": "0.0.1",
+  "description": "A tutorial on the GIT distributed version control system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CTS-NL/GIT.Presentation.git"
+  },
+  "keywords": [
+    "presentation",
+    "git"
+  ],
+  "author": "Tim Oram <mitmaro@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CTS-NL/GIT.Presentation/issues"
+  },
+  "homepage": "https://github.com/CTS-NL/GIT.Presentation",
+  "devDependencies": {
+    "connect": "^3.3.4",
+    "serve-static": "^1.8.1"
+  }
+}
