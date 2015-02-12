@@ -20,9 +20,6 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/css/zenburn.css">
 
-		<!-- Grid system -->
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" />
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -37,6 +34,12 @@
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<![endif]-->
+
+		<!-- Grid system -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/unsemantic/0/unsemantic-grid-base.css" />
+
+		<link rel="stylesheet" href="custom.css" />
+
 	</head>
 
 	<body>
@@ -179,7 +182,8 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: false,
+				
+				controls: true,
 				progress: true,
 				history: true,
 				center: true,
