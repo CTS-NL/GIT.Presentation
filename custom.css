@@ -1,0 +1,9 @@
+.image-info img {
+    vertical-align: middle;
+}
+
+.image-info ul {
+    list-style: none;
+    padding-right: 10px;
+    vertical-align: middle;
+}

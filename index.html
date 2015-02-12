@@ -171,6 +171,86 @@
 						<p class="fragment">Local, no network connection required.</p>
 					</section>
 				</section>
+				<!-- start: might leave this bit out -->
+				<section>
+					<section>
+						<h2>Centralized System</h2>
+						<div class="grid-container grid-parent image-info">
+							<ul class="grid-50 image-info">
+								<li class="fragment">Commit to server</li>
+								<li class="fragment">Pull from server</li>
+								<li class="fragment">History saved on server</li>
+							</ul>
+							<img  class="grid-50" data-src="img/svn-server.png" alt="Subversion server based system" />
+						</div>
+					</section>
+					<section>
+						<h2>Centralized System</h2>
+						<p>Server is required for most operations</p>
+						<p class="fragment">Server connection lost?</p>
+						<p class="fragment">No version control</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Distributed System</h2>
+						<img data-src="img/git-server.png" alt="GIT based system" />
+					</section>
+					<section>
+						<h2>Distributed System</h2>
+						<p>Every developer has their own copy</p>
+						<p class="fragment">with their own history</p>
+						<p class="fragment">to which they can push and pull to others.</p>
+					</section>
+					<section>
+						<h2>Distributed System</h2>
+						<p>Seems confusing, right?</p>
+						<p class="fragment">GitHub can act like a central server</p>
+					</section>
+				</section>
+				<!-- end: might leave this bit out -->
+				<section>
+					<section>
+						<h2>The main states</h2>
+						<aside class="notes">
+							Don't worry if this doesn't make complete sense. It's a high level look.
+						</aside>
+					</section>
+					<section>
+						<h2>The main states</h2>
+						<p class="fragment">Repository</p>
+						<p class="fragment">Staging area</p>
+						<p class="fragment">Working directory</p>
+					</section>
+					<section>
+						<h2>Repository</h2>
+						<p class="fragment">The .git directory</p>
+						<p class="fragment">Where your history is stored</p>
+						<p class="fragment">Where you commit files</p>
+					</section>
+					<section>
+						<h2>Staging area</h2>
+						<p class="fragment">Where you construct your commit</p>
+						<p class="fragment">Layer between you and the repository</p>
+					</section>
+					<section>
+						<h2>Working directory</h2>
+						<p class="fragment">Current copy of the repository</p>
+						<p class="fragment">Actual files and directories</p>
+						<p class="fragment">What you use and modify</p>
+					</section>
+					<section>
+						<h2>Basic workflow</h2>
+						<p class="fragment">Modify files in the working directory</p>
+						<p class="fragment">Add files to the staging area</p>
+						<p class="fragment">Commit the staging area to the repository</p>
+						<p class="fragment">Checkout files from the repository to the working directory</p>
+					</section>
+					<section>
+						<h2>Basic workflow</h2>
+						<img data-src="img/git-states.png" alt="GIT States" />
+					</section>
+				</section>
 			</div>
 		</div>
 
