@@ -7,3 +7,8 @@
     padding-right: 10px;
     vertical-align: middle;
 }
+
+.reveal section img {
+    border-width: 2px;
+    border-color: #999999;
+}
